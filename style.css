@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #08080d;
+  color: #f5f5f5;
+}
+
+/* HEADER */
+
+header {
+  height: 70px;
+  padding: 0 8%;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid #24242d;
+}
+
+header h2 {
+  color: #a66bff;
+}
+
+/* MAIN */
+
+main {
+  width: 85%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* SEARCH */
+
+.search-section {
+  text-align: center;
+  padding: 80px 20px 50px;
+}
+
+.search-section h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.search-section h1 span {
+  color: #a66bff;
+}
+
+.search-section p {
+  color: #a7a7b0;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+
+  width: 600px;
+  max-width: 100%;
+
+  margin: auto;
+}
+
+.search-box input {
+  flex: 1;
+
+  padding: 15px;
+
+  background: #101116;
+  color: white;
+
+  border: 1px solid #33333d;
+  outline: none;
+
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 0 25px;
+
+  background: #8b4dff;
+  color: white;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.search-box button:hover {
+  background: #a66bff;
+}
+
+/* PROFILE */
+
+#profile-section {
+  margin-bottom: 40px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 30px;
+
+  background: #101116;
+
+  border: 1px solid #24252d;
+
+  border-radius: 12px;
+}
+
+#avatar {
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-details h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+#profile-username {
+  color: #a66bff;
+  margin-bottom: 15px;
+}
+
+#bio {
+  color: #a7a7b0;
+  margin-bottom: 25px;
+}
+
+/* STATS */
+
+.stats {
+  display: flex;
+  gap: 40px;
+
+  margin-bottom: 25px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.stats strong {
+  font-size: 20px;
+  color: #a66bff;
+}
+
+.stats span {
+  color: #a7a7b0;
+  font-size: 14px;
+}
+
+#github-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#github-link:hover {
+  color: #a66bff;
+}
+
+/* REPOSITORIES */
+
+#repositories {
+  margin-bottom: 60px;
+}
+
+.repo-heading {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.repo-heading h2 {
+  color: #ffffff;
+}
+
+.repo-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.repo-controls input,
+.repo-controls select {
+  padding: 10px;
+
+  background: #101116;
+
+  color: white;
+
+  border: 1px solid #33333d;
+
+  border-radius: 5px;
+
+  outline: none;
+}
+
+.repo-controls input {
+  width: 220px;
+}
+
+/* REPO CARDS */
+
+#repo-container {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.repo-card {
+  padding: 22px;
+
+  background: #101116;
+
+  border: 1px solid #24252d;
+
+  border-radius: 10px;
+
+  transition: 0.2s;
+}
+
+.repo-card:hover {
+  border-color: #8b4dff;
+
+  transform: translateY(-2px);
+}
+
+.repo-card h3 {
+  color: #a66bff;
+
+  margin-bottom: 10px;
+}
+
+.repo-card p {
+  color: #a7a7b0;
+
+  line-height: 1.5;
+
+  margin-bottom: 15px;
+}
+
+.repo-info {
+  display: flex;
+
+  gap: 20px;
+
+  color: #a7a7b0;
+
+  font-size: 14px;
+}
+
+.repo-card a {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  color: #a66bff;
+
+  text-decoration: none;
+}
+
+.repo-card a:hover {
+  color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  main {
+    width: 92%;
+  }
+
+  .search-section h1 {
+    font-size: 34px;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .repo-heading {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .repo-controls {
+    flex-direction: column;
+  }
+
+  .repo-controls input {
+    width: 100%;
+  }
+
+  #repo-container {
+    grid-template-columns: 1fr;
+  }
+}
